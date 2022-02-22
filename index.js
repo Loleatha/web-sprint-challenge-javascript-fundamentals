@@ -67,13 +67,13 @@ const zooAnimals = [
 
   }*/
 
-  const displayNames = [];
+  const animalNames = [];
 
   zooAnimals.forEach((names) => {
-    displayNames.push(`Name: ${names.animal_name}, Scientific: ${names.scientific_name}`);
+    animalNames.push(`Name: ${names.animal_name}, Scientific: ${names.scientific_name}`);
   });
 
-  console.log(displayNames)
+  console.log(animalNames)
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -117,11 +117,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  let populationTotal = zooAnimals.reduce((total, animal) => {
+  let USApop = zooAnimals.reduce((total, animal) => {
     return total + animal.population
   }, 0);
 
-  console.log(populationTotal);
+  console.log(USApop);
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
