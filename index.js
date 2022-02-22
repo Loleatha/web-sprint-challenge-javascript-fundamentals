@@ -84,30 +84,28 @@ console.log(animalNames(zooAnimals));
   For example: ['jackal, asiatic', .....]
   */
 
-  /*function lowerCaseNames(data){
+  function lowerCaseNames(data){
     const lowCaseAnimalNames = data.map(item => item.animal_name.toLowerCase())
     return lowCaseAnimalNames
   }
 
-  console.log(lowerCaseNames(zooAnimals));*/
+  console.log(lowerCaseNames(zooAnimals));
 
-  const lowerCaseNames = zooAnimals.map((state) => {
-    return state.animal_name.toLowerCase()
-  })
-  
-
-console.log(lowerCaseNames);
 
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  /*function lowPopulationAnimals(){
-    
-  }*/
+  function lowPopulationAnimals(array){
+    const lowPop = array.filter(function(item){
+      return item.population < 5;
+    })
+    return lowPop;
+  }
 
-  const lowPopulationAnimals = [];
+
+ /* const lowPopulationAnimals = [];
 
   for (let i = 0; i < zooAnimals.length; i++) {
     if(zooAnimals[i].population < 5) {
@@ -115,7 +113,7 @@ console.log(lowerCaseNames);
     }
   }
   
-  console.log(lowPopulationAnimals);
+  console.log(lowPopulationAnimals);*/
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -123,11 +121,18 @@ console.log(lowerCaseNames);
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  const USApop = zooAnimals.reduce((total, animal) => {
+  /*const USApop = zooAnimals.reduce((total, animal) => {
     return total += animal.population
   }, 0);
 
-  console.log(USApop);
+  console.log(USApop); */
+
+  function USApop(array) {
+    const totalPop = array.reduce(function(currentTotal, item) {
+      return item.population + currentTotal;
+    }, 0)
+    return totalPop;
+  }
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -188,7 +193,7 @@ function CuboidMaker(attributes){
   Formula for cuboid volume: length * width * height   */
 
   CuboidMaker.prototype.volume = function () {
-    return this.length * this.width * this.height
+    return (this.length * this.width * this.height);
   };
 
 
@@ -200,8 +205,8 @@ function CuboidMaker(attributes){
 
 
 CuboidMaker.prototype.surfaceArea = function() {
-  return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height))
-};
+  return (2 * (this.length * this.width) + (this.length * this.height) + (this.width * this.height) )
+}; 
 
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
