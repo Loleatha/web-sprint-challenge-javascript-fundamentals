@@ -25,14 +25,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+-`.forEach` returns a value of undefined where `.map` returns a new array with the fixed elements. You can also use reduce or filter with `.map` that you can't do with .forEach because it will still come back as undefined. If your plans are to change or use the data you should pick .map because it will return the array with the changed data, however if you don't need the data returned you should use .forEach.
 
 2. Explain the difference between a callback and a higher order function.
+-A callback gets passed as a argument into a higher order function.Higher order function is a function that lets you take another function and use it as an argument or it can return a function as a result. A higher order function also recieves the callback to be invoked.
 
 3. Explain what a closure is.
+-Closure is a functionh and the variables it uses inside the function also known as a lexical environment.
 
 4. Describe the four principles of the 'this' keyword.
+-1: Window Binding: Where 'this' is the global object.
+2: Implicit Binding: Where "this" now shows the object which the function calls on.
+3: `New` Binding: the new keyword constructs and makes up a new object and now "this" will point to it.A
+4: Explict Binding: When we tell the engine to sit "this" to point at certain values using  "call", "bind", or "apply."
 
 5. Why do we need super() in an extended class?
+-super() lets us call and have access to the `this` keyword.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
