@@ -250,7 +250,7 @@ const cuboidTwo = new CuboidMakerTwo(4, 5, 5)
  console.log(cuboidTwo.surfaceArea()); // 130
 
 
-
+//left off with 75%
 
 
   
